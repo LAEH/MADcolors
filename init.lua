@@ -1,10 +1,15 @@
 #!/usr/bin/env th
+
+--●●●●●●●●●●●●●●●
+--●             ●
+--●             ●
+--●             ●
+--●             ●
+--●             ●
+--●             ●
+--●●●●●●●●●●●●●●●
+
 local MADcolors = {}
---●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
---●                                 ●
---●                             ENV ●
---●                                 ●
---●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 local MADpalettes = require 'MADcolors.palettes'
 
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
@@ -30,16 +35,16 @@ end
 --step    | 1-4
 --value   | 1-9
 --chroma  | 1-100
-
+local munsellHueCodes = MADpalettes.munsell.codes
+local nCode = #munsellHueCodes
 function MADcolors.munsell (step,code,value,chroma)
-   local value = 10 - value
+   local code = opt.code or munsellHueCodes[torch.random(1,nCode)]
+   local value = opt.value or torch.random(1,9)
+   local chroma = opt.chroma or torch.random(1,100)
    local row = MADpalettes.munsell[code][step][value]
    local nChroma = #row
    local idx = math.ceil((chroma/100)*nChroma)
-   local hex = row[idx]
-   local string = step..code..'v='..value..'c='..idx..'/'..nChroma..'('..chroma..'/100)'..'-'..hex
-   print(string)
-   return hex
+   return row[idx]
 end
 MADcolors.munsell(1,'YR',2,50)
 
@@ -52,11 +57,11 @@ MADcolors.munsell(1,'YR',2,50)
 function MADcolors.circular(opt)
    opt = opt or {}
    local n  = #(MADpalettes.munsell.flat) -- n colors
-   local value = opt.value or math.ceil(torch.uniform(1,9))
-   local chroma = opt.chroma or math.ceil(torch.uniform(1,100))
-   local degree = opt.degree or math.ceil(torch.uniform(1,40))
-   local goLeft = opt.goLeft or math.ceil(torch.uniform(1,20))
-   local goRight = opt.goRight or math.ceil(torch.uniform(1,20))
+   local value = opt.value or torch.random(1,9)
+   local chroma = opt.chroma or torch.random(1,100)
+   local degree = opt.degree or torch.random(1,40)
+   local goLeft = opt.goLeft or torch.random(1,20)
+   local goRight = opt.goRight or torch.random(1,20)
 
    -- Get to hue non rectangular 2d matrix
    local idx = degree
