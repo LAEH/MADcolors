@@ -35,18 +35,19 @@ end
 --step    | 1-4
 --value   | 1-9
 --chroma  | 1-100
-local munsellHueCodes = MADpalettes.munsell.codes
-local nCode = #munsellHueCodes
-function MADcolors.munsell (step,code,value,chroma)
-   local code = opt.code or munsellHueCodes[torch.random(1,nCode)]
-   local value = opt.value or torch.random(1,9)
-   local chroma = opt.chroma or torch.random(1,100)
-   local row = MADpalettes.munsell[code][step][value]
-   local nChroma = #row
-   local idx = math.ceil((chroma/100)*nChroma)
-   return row[idx]
-end
-MADcolors.munsell(1,'YR',2,50)
+-- local munsellHueCodes = MADpalettes.munsell.codes
+-- local nCode = #munsellHueCodes
+-- function MADcolors.munsell (opt)
+--    opt = opt or {}
+--    local code = opt.code or munsellHueCodes[torch.random(1,8)]
+--    local value = opt.value or torch.random(1,9)
+--    local chroma = opt.chroma or torch.random(1,100)
+--    local row = MADpalettes.munsell[code][step][value]
+--    local nChroma = #row
+--    local idx = math.ceil((chroma/100)*nChroma)
+--    return row[idx]
+-- end
+-- print('function MADcolors.munsell.circular() = '..MADcolors.munsell())
 
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 --●                                 ●
