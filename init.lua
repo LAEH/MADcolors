@@ -73,6 +73,7 @@ function MADcolors.circular(opt)
    if idx > n then idx = idx - n end
    if idx < 0 then idx = n - idx end
 
+   print(#MADpalettes.munsell.flat)
    -- Access value level row
    value = 10 - value
    local valueRow = MADpalettes.munsell.flat[idx][value]
@@ -82,7 +83,7 @@ function MADcolors.circular(opt)
    local chromaIndex = math.ceil((chroma/100)*nChroma)
    return valueRow[chromaIndex]
 end
--- print('function MADcolors.circular() = '..MADcolors.circular())
+print('function MADcolors.circular() = '..MADcolors.circular())
 
 
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
