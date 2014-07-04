@@ -59,7 +59,7 @@ function MADcolors.circular(opt)
    opt = opt or {}
    local n  = 40
    local value = opt.value or torch.random(1,9)
-   local chroma = opt.chroma or torch.random(1,100)
+   local chroma = opt.chroma or torch.random(1,99)
    local degree = opt.degree or torch.random(1,40)
    local goLeft = opt.goLeft or torch.random(1,20)
    local goRight = opt.goRight or torch.random(1,20)
@@ -82,7 +82,7 @@ function MADcolors.circular(opt)
    local chromaIndex = math.ceil((chroma/100)*nChroma)
    return valueRow[chromaIndex]
 end
-print('function MADcolors.circular() = '..MADcolors.circular())
+-- print('function MADcolors.circular() = '..MADcolors.circular())
 
 
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
@@ -98,7 +98,7 @@ local darkBlues = {'#24273b','#1f2137','#191b31','#000024'}
 function MADcolors.rdm(colorList)
    local colorList = colorList or darkBlues
    local array = colorList
-   for i = 1, #array do
+   for i = 1, #array-1 do
       local  j = torch.random(i,#array)
       array[i], array[j] = array[j], array[i]
    end
