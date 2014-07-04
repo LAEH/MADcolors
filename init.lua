@@ -57,7 +57,7 @@ end
 
 function MADcolors.circular(opt)
    opt = opt or {}
-   local n  = #(MADpalettes.munsell.flat) -- n colors
+   local n  = 40
    local value = opt.value or torch.random(1,9)
    local chroma = opt.chroma or torch.random(1,100)
    local degree = opt.degree or torch.random(1,40)
