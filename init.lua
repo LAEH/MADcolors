@@ -5,7 +5,7 @@ local MADcolors = {}
 --●                             ENV ●
 --●                                 ●
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
-local MADpalettes  = require 'MADpalettes'
+local MADpalettes = require ‘MADcolors.palettes’
 
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 --●                                 ●
