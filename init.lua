@@ -19,16 +19,17 @@ local MADcolors = {
 --●              ●
 --●●●●●●●●●●●●●●●●
 
-function MADcolors.rdm(colorList)
-   local colorList = colorList or MADpalettes.coolhex
-   local array = colorList
+function MADcolors.rdm(arrayPalette)
+   local arrayPalette = arrayPalette or MADpalettes.coolhex
+   local array = arrayPalette
    for i = 1, #array-1 do
       local  j = torch.random(i,#array)
       array[i], array[j] = array[j], array[i]
    end
+   -- print('Palette = ')
    return array[1]
 end
-print('function MADcolors.rdm() = '..MADcolors.rdm())
+MADcolors.rdm()
 
 --●●●●●●●●●●●●●●●●
 --●              ●
@@ -171,7 +172,7 @@ function MADcolors.hex2rgb(hexString)
    G = tonumber('0x'..G)/255
    B = tonumber('0x'..B)/255
 end
-
+MADcolors.hex2rgb('#000000')
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
 --●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●
