@@ -28,17 +28,159 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="madcolors" class="anchor" href="#madcolors"><span class="octicon octicon-link"></span></a>MADcolors</h3>
+        <h2>
+<a name="madcolorslua" class="anchor" href="#madcolorslua"><span class="octicon octicon-link"></span></a>MADcolors.lua</h2>
+
+<h3>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h3>
 
 <div class="highlight highlight-sh"><pre>luarocks install https://raw.githubusercontent.com/LAEH/MADcolors/master/madcolors-scm-1.rockspec
 </pre></div>
 
-<h2>
-<a name="load-and-run" class="anchor" href="#load-and-run"><span class="octicon octicon-link"></span></a>Load and run</h2>
+<h3>
+<a name="load-and-run" class="anchor" href="#load-and-run"><span class="octicon octicon-link"></span></a>Load and run</h3>
 
 <div class="highlight highlight-lua"><pre><span class="n">th</span>
 <span class="o">&gt;</span> <span class="n">mc</span> <span class="o">=</span> <span class="nb">require</span> <span class="s1">'</span><span class="s">madcolors'</span>
+</pre></div>
+
+<h3>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h3>
+
+<div class="highlight highlight-lua"><pre><span class="cp">#!/usr/bin/env th</span>
+<span class="kd">local</span> <span class="n">MADpalettes</span> <span class="o">=</span> <span class="nb">require</span> <span class="s1">'</span><span class="s">palettes'</span>
+<span class="kd">local</span> <span class="n">col</span> <span class="o">=</span> <span class="nb">require</span> <span class="s1">'</span><span class="s">async.repl'</span><span class="p">.</span><span class="n">colorize</span>
+<span class="k">function</span> <span class="nf">h1</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">.</span><span class="n">_black</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="k">end</span>
+<span class="k">function</span> <span class="nf">h2</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">.</span><span class="n">red</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="k">end</span>
+<span class="k">function</span> <span class="nf">h3</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">.</span><span class="n">_cyan</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="k">end</span>
+<span class="kd">local</span> <span class="n">MADcolors</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="n">munsell</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="rdm" class="anchor" href="#rdm"><span class="octicon octicon-link"></span></a>rdm</h3>
+
+<div class="highlight highlight-lua"><pre><span class="k">function</span> <span class="nc">MADcolors</span><span class="p">.</span><span class="nf">rdm</span><span class="p">(</span><span class="n">arrayPalette</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">arrayPalette</span> <span class="o">=</span> <span class="n">arrayPalette</span> <span class="ow">or</span> <span class="n">MADpalettes</span><span class="p">.</span><span class="n">coolhex</span>
+   <span class="kd">local</span> <span class="n">array</span> <span class="o">=</span> <span class="n">arrayPalette</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">array</span><span class="o">-</span><span class="mi">1</span> <span class="k">do</span>
+      <span class="kd">local</span>  <span class="n">j</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="o">#</span><span class="n">array</span><span class="p">)</span>
+      <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+   <span class="k">end</span>
+   <span class="c1">-- print('Palette = ')</span>
+   <span class="k">return</span> <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">end</span>
+<span class="n">MADcolors</span><span class="p">.</span><span class="n">rdm</span><span class="p">()</span>
+</pre></div>
+
+<h3>
+<a name="rdm-1" class="anchor" href="#rdm-1"><span class="octicon octicon-link"></span></a>rdm</h3>
+
+<div class="highlight highlight-lua"><pre><span class="k">function</span> <span class="nc">MADpalettes</span><span class="p">.</span><span class="nf">hsla</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="s1">'</span><span class="s">hsla('</span> <span class="o">..</span> <span class="n">h</span> <span class="o">..</span> <span class="s1">'</span><span class="s">,'</span> <span class="o">..</span> <span class="n">s</span> <span class="o">..</span> <span class="s1">'</span><span class="s">%,'</span> <span class="o">..</span> <span class="n">l</span> <span class="o">..</span> <span class="s1">'</span><span class="s">%,'</span> <span class="o">..</span> <span class="n">a</span> <span class="o">..</span> <span class="s1">'</span><span class="s">)'</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="munsell-by-code" class="anchor" href="#munsell-by-code"><span class="octicon octicon-link"></span></a>Munsell by code</h3>
+
+<div class="highlight highlight-lua"><pre><span class="k">function</span> <span class="nc">MADcolors</span><span class="p">.</span><span class="nf">munsell</span><span class="p">.</span><span class="n">byCode</span><span class="p">(</span><span class="n">opt</span><span class="p">)</span>
+
+   <span class="c1">---- PALETTE</span>
+   <span class="kd">local</span> <span class="n">codes</span> <span class="o">=</span> <span class="n">MADpalettes</span><span class="p">.</span><span class="n">munsell</span><span class="p">.</span><span class="n">codes</span>
+   <span class="kd">local</span> <span class="n">RDMcode</span> <span class="o">=</span> <span class="n">codes</span><span class="p">[</span><span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">#</span><span class="n">codes</span><span class="p">)]</span>
+   <span class="kd">local</span> <span class="n">setPalette</span>  <span class="o">=</span> <span class="n">MADpalettes</span><span class="p">.</span><span class="n">munsell</span><span class="p">.</span><span class="n">bycode</span>
+
+   <span class="c1">---- OPTIONS</span>
+   <span class="n">opt</span> <span class="o">=</span> <span class="n">opt</span> <span class="ow">or</span> <span class="p">{}</span>
+   <span class="kd">local</span> <span class="n">code</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">code</span> <span class="ow">or</span> <span class="n">RDMcode</span>
+   <span class="kd">local</span> <span class="n">step</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">step</span> <span class="ow">or</span> <span class="mi">4</span>
+   <span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">value</span> <span class="ow">or</span> <span class="mi">9</span>
+   <span class="kd">local</span> <span class="n">chroma</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">value</span> <span class="ow">or</span> <span class="mi">50</span>
+
+   <span class="c1">---- GET</span>
+   <span class="kd">local</span> <span class="n">setHue</span> <span class="o">=</span> <span class="n">setPalette</span><span class="p">[</span><span class="n">code</span><span class="p">]</span>
+   <span class="kd">local</span> <span class="n">setStep</span> <span class="o">=</span> <span class="n">setHue</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+   <span class="kd">local</span> <span class="n">setValue</span> <span class="o">=</span> <span class="n">setStep</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+   <span class="kd">local</span> <span class="n">nChroma</span> <span class="o">=</span> <span class="o">#</span><span class="n">setValue</span>
+   <span class="kd">local</span> <span class="n">chromaIndex</span> <span class="o">=</span> <span class="nb">math.ceil</span><span class="p">((</span><span class="n">chroma</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">nChroma</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">color</span> <span class="o">=</span> <span class="n">setValue</span><span class="p">[</span><span class="n">chromaIndex</span><span class="p">]</span>
+
+   <span class="c1">---- PRINT</span>
+   <span class="n">h1</span><span class="p">(</span><span class="s">[[</span>
+<span class="s">      ------------------------</span>
+<span class="s">      MADcolors.munsell.byCode ({</span>
+<span class="s">         Value  =]]</span><span class="o">..</span> <span class="n">step</span>   <span class="o">..</span><span class="s">[[,  (1-9)</span>
+<span class="s">         Chroma =]]</span><span class="o">..</span> <span class="n">code</span>  <span class="o">..</span><span class="s">[[,  (R-YR-Y-GY-G-BG-B-PB-P-RP)</span>
+<span class="s">         degree =]]</span><span class="o">..</span> <span class="n">value</span>  <span class="o">..</span><span class="s">[[,  (1-40)</span>
+<span class="s">         rLeft  =]]</span><span class="o">..</span> <span class="n">chroma</span>  <span class="o">..</span><span class="s">[[,  (1-100)</span>
+<span class="s">      })</span>
+<span class="s">      index Chroma = ]]</span><span class="o">..</span><span class="n">chromaIndex</span><span class="o">..</span><span class="s">[[/]]</span><span class="o">..</span><span class="n">nChroma</span><span class="o">..</span><span class="s">[[</span>
+<span class="s">      hex = ]]</span><span class="o">..</span><span class="n">color</span>
+   <span class="p">)</span>
+
+   <span class="c1">---- RETURN</span>
+   <span class="k">return</span> <span class="n">color</span>
+<span class="k">end</span>
+
+<span class="n">MADcolors</span><span class="p">.</span><span class="n">munsell</span><span class="p">.</span><span class="n">byCode</span><span class="p">({</span>
+   <span class="n">code</span> <span class="o">=</span> <span class="s1">'</span><span class="s">R'</span><span class="p">,</span>
+   <span class="n">step</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+   <span class="n">value</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
+   <span class="n">chroma</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="p">})</span>
+</pre></div>
+
+<h3>
+<a name="munsell-circular" class="anchor" href="#munsell-circular"><span class="octicon octicon-link"></span></a>Munsell circular</h3>
+
+<div class="highlight highlight-lua"><pre><span class="k">function</span> <span class="nc">MADcolors</span><span class="p">.</span><span class="nf">circular</span><span class="p">(</span><span class="n">opt</span><span class="p">)</span>
+   <span class="n">opt</span> <span class="o">=</span> <span class="n">opt</span> <span class="ow">or</span> <span class="p">{}</span>
+   <span class="kd">local</span> <span class="n">n</span>  <span class="o">=</span> <span class="mi">40</span>
+   <span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">value</span> <span class="ow">or</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">chroma</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">chroma</span> <span class="ow">or</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">degree</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">degree</span> <span class="ow">or</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">goLeft</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">goLeft</span> <span class="ow">or</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">goRight</span> <span class="o">=</span> <span class="n">opt</span><span class="p">.</span><span class="n">goRight</span> <span class="ow">or</span> <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+
+   <span class="c1">----hue</span>
+   <span class="kd">local</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">degree</span>
+   <span class="k">if</span> <span class="n">goRight</span><span class="o">~=</span><span class="mi">0</span> <span class="k">then</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="n">goRight</span> <span class="k">end</span>
+   <span class="k">if</span> <span class="n">goLeft</span><span class="o">~=</span><span class="mi">0</span> <span class="k">then</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">-</span> <span class="n">goLeft</span> <span class="k">end</span>
+
+   <span class="c1">----list -&gt; circle</span>
+   <span class="k">if</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="k">then</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">-</span> <span class="n">n</span> <span class="k">end</span>
+   <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">then</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">idx</span> <span class="k">end</span>
+
+   <span class="c1">----light row</span>
+   <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">value</span>
+   <span class="kd">local</span> <span class="n">valueRow</span> <span class="o">=</span> <span class="n">MADpalettes</span><span class="p">.</span><span class="n">munsell</span><span class="p">.</span><span class="n">flat</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">value</span><span class="p">]</span>
+
+   <span class="c1">----color</span>
+   <span class="kd">local</span> <span class="n">nChroma</span> <span class="o">=</span> <span class="o">#</span><span class="n">valueRow</span>
+   <span class="kd">local</span> <span class="n">chromaIndex</span> <span class="o">=</span> <span class="nb">math.ceil</span><span class="p">((</span><span class="n">chroma</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="n">nChroma</span><span class="p">)</span>
+   <span class="kd">local</span> <span class="n">color</span> <span class="o">=</span> <span class="n">valueRow</span><span class="p">[</span><span class="n">chromaIndex</span><span class="p">]</span>
+
+   <span class="n">h1</span><span class="p">(</span><span class="s">[[</span>
+<span class="s">      ------------------</span>
+<span class="s">      MADcolors.circular ({</span>
+<span class="s">         Value  =]]</span><span class="o">..</span> <span class="n">value</span>   <span class="o">..</span><span class="s">[[,  (1-9)</span>
+<span class="s">         Chroma =]]</span><span class="o">..</span> <span class="n">chroma</span>  <span class="o">..</span><span class="s">[[,  (1-100)</span>
+<span class="s">         degree =]]</span><span class="o">..</span> <span class="n">degree</span>  <span class="o">..</span><span class="s">[[,  (1-40)</span>
+<span class="s">         rLeft  =]]</span><span class="o">..</span> <span class="n">goLeft</span>  <span class="o">..</span><span class="s">[[,  (1-20)</span>
+<span class="s">         rRight =]]</span><span class="o">..</span> <span class="n">goRight</span> <span class="o">..</span><span class="s">[[,  (1-20)</span>
+<span class="s">      })</span>
+<span class="s">      COLOR = ]]</span><span class="o">..</span><span class="n">color</span><span class="o">..</span><span class="s">[[</span>
+<span class="s">   ]]</span>
+   <span class="p">)</span>
+
+   <span class="c1">---- RETURN</span>
+   <span class="k">return</span> <span class="n">color</span>
+
+<span class="k">end</span>
+<span class="n">MADcolors</span><span class="p">.</span><span class="n">circular</span><span class="p">()</span>
 </pre></div>
       </section>
       <footer>
