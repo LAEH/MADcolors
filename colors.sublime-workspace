@@ -1,0 +1,1417 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"table",
+				"table.concat	table.concat"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"im",
+				"imageBinsVariance"
+			],
+			[
+				"fil",
+				"fileArray"
+			],
+			[
+				"color",
+				"colorSpace"
+			],
+			[
+				"bin",
+				"binvariance"
+			],
+			[
+				"in",
+				"insert"
+			],
+			[
+				"out",
+				"outputdir"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "init.lua",
+			"settings":
+			{
+				"buffer_size": 4320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "palettes.lua",
+			"settings":
+			{
+				"buffer_size": 43349,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"edit",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sche",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"edi",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"schem",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"syn",
+				"Set Syntax: Ruby"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"scheme",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"del",
+				"File: Delete"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"sch",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"LOWE",
+				"Convert Case: Lower Case"
+			],
+			[
+				"high",
+				"Trailing Spaces: Toggle Trailing Spaces Highlighting"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"tog",
+				"View: Toggle Tabs"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Indent XML"
+			],
+			[
+				"lu",
+				"Set Syntax: Lua Dev"
+			],
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"proje",
+				"Project: Save As"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"gutte",
+				"GutterColor: Clear Cache"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"SCH",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"sc",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"ed",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"shce",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"add",
+				"Schemr: Add current scheme to favorites"
+			],
+			[
+				"alu",
+				"Set Syntax: Lua"
+			],
+			[
+				"OPE",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"EDI",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"gmo",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"col",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"shc",
+				"Schemr: List favorite schemes"
+			],
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"ind",
+				"Indent XML"
+			],
+			[
+				"color",
+				"GutterColor: Clear Cache"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"train",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"spe",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"rtab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Toggle Trailing Spaces Highlighting"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"open",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"res",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"xm",
+				"Set Syntax: XML"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"pre",
+				"HTMLPrettify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"ope",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"toggl",
+				"View: Toggle Tabs"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upp",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"open ",
+				"File: Copy Path From Project Encoded"
+			],
+			[
+				"stat",
+				"View: Toggle Status Bar"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"to",
+				"View: Toggle Tabs"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"them",
+				"Themr: List favorite themes"
+			],
+			[
+				"tri",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"the",
+				"Themr: List themes"
+			],
+			[
+				"th",
+				"Themr: List themes"
+			],
+			[
+				"gm",
+				"Set Syntax: Gmod Lua"
+			],
+			[
+				"fav",
+				"Themr: List favorite themes"
+			],
+			[
+				"chem",
+				"Schemr: List all schemes"
+			],
+			[
+				"editheme",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"specia",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"ad",
+				"Schemr: Add current scheme to favorites"
+			],
+			[
+				"resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"togg tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"toggle",
+				"View: Toggle Tabs"
+			],
+			[
+				"toggle tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"mar",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"syn mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"insa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"synta l",
+				"Set Syntax: Lua"
+			]
+		],
+		"width": 484.0
+	},
+	"console":
+	{
+		"height": 108.0,
+		"history":
+		[
+			"sublime.set_clipboard(view.syntax_name(view.sel()[0].b))",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/LA/git/LAEH/MADcolors/gitpush.lua",
+		"/Users/LA/git/LAEH/MADcolors/MADcolors.lua",
+		"/Users/LA/git/LAEH/MADpixels/run.lua",
+		"/Users/LA/git/LAEH/MADpixels/madpixels.lua",
+		"/Users/LA/git/madbits/pixels/init.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Colorsublime/themes/CandyLand.tmTheme",
+		"/Users/LA/git/LAEH/MADweb/topFrame.html",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/themes/CandyLand.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/LA/git/LAEH/MADweb/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_regions.scssc",
+		"/Users/LA/git/LAEH/MADweb/README.md",
+		"/Users/LA/git/LAEH/laeh.github.io/scss/codeLua.scss",
+		"/Users/LA/git/LAEH/laeh.github.io/css/highlight_styles/atelier-dune.dark.css",
+		"/Users/LA/git/LAEH/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_border-radius.scssc",
+		"/Users/LA/git/LAEH/laeh.github.io/README.md",
+		"/Users/LA/git/LAEH/laeh.github.io/code_MADweb.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/code_MADpixels.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/code_MADenvironment.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/config.rb",
+		"/Users/LA/git/LAEH/laeh.github.io/js/mem.js",
+		"/Users/LA/git/LAEH/MADcolors/init.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/index.html",
+		"/Users/LA/git/LAEH/laeh.github.io/index.jade",
+		"/Users/LA/git/LAEH/laeh.github.io/run.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/scss/sort.lua",
+		"/Users/LA/git/LAEH/laeh.github.io/scss/lato.scss",
+		"/Users/LA/git/LAEH/MADenv/commands.lua",
+		"/Users/LA/git/LAEH/MADenv/gitpush.lua",
+		"/Users/LA/git/LAEH/MADenv/init.lua",
+		"/Users/LA/git/LAEH/MADenv/newpc.lua",
+		"/Users/LA/git/LAEH/MADenv/schemes.lua",
+		"/Users/LA/Desktop/unicodes.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/LA/Downloads/Blank-Color-Scheme-master/Blank.tmTheme",
+		"/Users/LA/git/LAEH/MADpixels/ascii",
+		"/Users/LA/git/LAEH/MADpixels/purgatory.lua",
+		"/Users/LA/git/LAEH/MADpixels/gitpush.lua",
+		"/Users/LA/git/LAEH/MADpixels/README.md",
+		"/Users/LA/git/LAEH/MADenvironment/newpc.lua",
+		"/Users/LA/git/LAEH/MADenvironment/newpc.md",
+		"/Users/LA/git/LAEH/MADenvironment/gitpush.lua",
+		"/Users/LA/git/LAEH/MADenvironment/preferences.lua",
+		"/Users/LA/git/LAEH/MADenvironment/init.lua",
+		"/Users/LA/git/LAEH/MADweb/css/screen.css",
+		"/Users/LA/git/LAEH/MADweb/.sass-cache/616239000aa390e6065056844287e2898cd52e47/screen.scssc",
+		"/Users/LA/git/LAEH/MADweb/scss/screen.scss",
+		"/Users/LA/git/ilovelua.github.io/scss/screen.scss",
+		"/Users/LA/git/LAEH/MADfun/test.lua",
+		"/Users/LA/git/LAEH/MADenvironment/madsublime-scm-1.rockspec",
+		"/Users/LA/git/LAEH/gitCloneAllLAEH.lua",
+		"/Users/LA/git/laeh/MADcolors/madcolors-scm-1.rockspec",
+		"/Users/LA/laeh.github.io/run.lua",
+		"/Users/LA/laeh.github.io/js/dom.js",
+		"/Users/LA/laeh.github.io/dom.lua",
+		"/Users/LA/laeh.github.io/color.lua",
+		"/Users/LA/laeh.github.io/json/colorHistograms.json",
+		"/Users/LA/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_images.scssc",
+		"/Users/LA/laeh.github.io/scss/screen.scss",
+		"/Users/LA/laeh.github.io/makeScheme.lua",
+		"/Users/LA/laeh.github.io/scss/sort.lua",
+		"/Users/LA/MADsublime/preferences.lua",
+		"/Users/LA/MADsublime/madsublime-scm-1.rockspec",
+		"/Users/LA/laeh.github.io/color2color.js",
+		"/Users/LA/laeh.github.io/main.lua",
+		"/Users/LA/laeh.github.io/MADpixels.lua",
+		"/Users/LA/laeh.github.io/colorScheme.lua",
+		"/Users/LA/pixels/init.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Colorsublime/themes/Paraiso_dark.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/Color Scheme - Nice Blue Soda/Nice Blue Soda.tmTheme",
+		"/Users/LA/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_shared.scssc",
+		"/Users/LA/laeh.github.io/font/font-awesome-4.0.3-isit/css/font-awesome.css",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404358935.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404358194.tmTheme",
+		"/Users/LA/laeh.github.io/fun.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/Pastel-Paws Color Scheme/Pastel Paws.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/Color Scheme - Default/Monokai.tmTheme",
+		"/Users/LA/laeh.github.io/ckoflow.html",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/themes/MADtheme1404340184.tmTheme",
+		"/Users/LA/laeh.github.io/scheme.lua",
+		"/Users/LA/laeh.github.io/palette.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/themes/MAD1.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/themes/MADtheme1404320209.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404320209.tmTheme",
+		"/Users/LA/laeh.github.io/scss/_base.scss",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/User/Color Highlighter/themes/MADtheme1404328544.tmTheme",
+		"/Users/LA/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_appearance.scssc",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404319760.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404318759.tmTheme",
+		"/Users/LA/laeh.github.io/buffer.js",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404318287.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404318356.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1404318614.tmTheme",
+		"/Users/LA/ckoflow/ckoflow.jade",
+		"/Users/LA/ckoflow/README.md",
+		"/Users/LA/ckoflow/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_border-radius.scssc",
+		"/Users/LA/ckoflow/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_background-clip.scssc",
+		"/Users/LA/ckoflow/scss/lato.scss",
+		"/Users/LA/laeh.github.io/ckoia.lua",
+		"/Users/LA/laeh.github.io/scss/lato.scss",
+		"/Users/LA/laeh.github.io/lato.html",
+		"/Users/LA/laeh.github.io/lato.jade",
+		"/Users/LA/laeh.github.io/madb2b/server.js",
+		"/Users/LA/laeh.github.io/imgdir.lua",
+		"/Users/LA/laeh.github.io/runmadpixels.lua",
+		"/Users/LA/laeh.github.io/madpixels.lua",
+		"/Users/LA/laeh.github.io/index.html",
+		"/Users/LA/laeh.github.io/miscellanous.lua",
+		"/Users/LA/laeh.github.io/README.md",
+		"/Users/LA/laeh.github.io/.sass-cache/7c8a94bae89fe024597c36dcb1fe3de542d76dc7/_hacks.scssc",
+		"/Users/LA/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_background-origin.scssc",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
+		"/Users/LA/laeh.github.io/omg.lua",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1403914783.tmTheme",
+		"/Users/LA/laeh.github.io/.sass-cache/4f1e45a1fa26308350aa4617f4baa403caea0894/screen.scssc",
+		"/Users/LA/laeh.github.io/css/scss/screen.css",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1403915394.tmTheme",
+		"/Users/LA/Library/Application Support/Sublime Text 3/Packages/MAD/MADtheme1403911832.tmTheme",
+		"/Users/LA/laeh.github.ioMADtheme1403911242tmTheme",
+		"/Users/LA/laeh.github.io/json/params.json",
+		"/Users/LA/laeh.github.io/img.lua",
+		"/Users/LA/laeh.github.io/.sass-cache/4916e2617e72294e99d67c49caa184778d2541df/_utilities.scssc",
+		"/Users/LA/laeh.github.io/arto.lua",
+		"/Users/LA/laeh.github.io/display-IN.html",
+		"/Users/LA/laeh.github.io/html/display-intro.html",
+		"/Users/LA/laeh.github.io/webMunsell.lua",
+		"/Users/LA/laeh.github.io/.sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_hyphenation.scssc",
+		"/Users/LA/laeh.github.io/html/display-mix.html"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'Css",
+			"Css",
+			"css",
+			"Css",
+			"css",
+			"Css",
+			"prettyName",
+			"</key>",
+			"<string>",
+			"<string>Css",
+			"Css",
+			"css",
+			"Css",
+			"css",
+			"Css",
+			"mon_color",
+			"dom",
+			"repoDir",
+			"fun",
+			"MADsublime",
+			"comm",
+			"font-family: \"monaco\";",
+			"font-family: \"Lucida Console\";",
+			"MADpixels",
+			".lua",
+			".codeDisplay\n.codeDisplay",
+			".codeDisplay",
+			":",
+			"i1",
+			"'*'",
+			"i",
+			"MADpixels.",
+			":",
+			"fixed",
+			":",
+			"--┏━━━━━━━━┓\n--┃        ┃\n--┃        ┃\n--┃        ┃\n--┃        ┃\n--┗━━━━━━━━┛",
+			"--●●●●●●●\n--●     ●\n--●     ●\n--●     ●\n--●●●●●●●",
+			"class",
+			"menuDIVS",
+			"top",
+			"content",
+			"name",
+			"file",
+			"docName",
+			"'",
+			"menu",
+			"makeIndex",
+			"makeDoc",
+			"dom.knitDoc",
+			"fun",
+			"js.",
+			"repoDir",
+			"js",
+			"function MADpixels.",
+			"function MADpixels",
+			"MADpixels",
+			"nevermove",
+			"idest",
+			"rdmi",
+			"opt",
+			"IMG",
+			"img",
+			"i",
+			"function MADpixels",
+			"MADpixels",
+			"madpixels",
+			"MADpixels",
+			"s ",
+			" s ",
+			"jayz",
+			"fun.",
+			" fun",
+			"Fun",
+			"fun",
+			"MADpalettes",
+			"'#",
+			"'",
+			",",
+			"MADpalettes",
+			"sublime",
+			"Sublime",
+			"sublime",
+			"},",
+			"+",
+			"json",
+			"gm",
+			"colo",
+			"string",
+			"#5",
+			"#576d75",
+			"#576d73",
+			"source",
+			"block",
+			"xmlGeneral",
+			"colorScheme",
+			"color",
+			"COlor",
+			"color",
+			"fun",
+			"hue40Index",
+			"nColor",
+			"rotationRight",
+			"rotationLeft",
+			"math.ceil(",
+			"=",
+			"nColor",
+			"unit",
+			"hue40Index",
+			"function",
+			"print",
+			"fun",
+			"color.test",
+			"storage",
+			"keyword",
+			"#1cb0ef",
+			"#00b0c2",
+			"{name= 'keyword',              color=cc(220,7,90)},   -- Language Keywords ('function', 'local', 'name')",
+			",",
+			"'",
+			"--",
+			"05",
+			"5-",
+			"-R",
+			"'10",
+			"'5",
+			"'2",
+			",",
+			"Y"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"cmv",
+			"color.munsell.values"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "init.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2940,
+								2940
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 628.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "palettes.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 43349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 17.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 72.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "colors.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"pal",
+				"palettes.lua"
+			],
+			[
+				"ma",
+				"MADcolors.lua"
+			],
+			[
+				"ini",
+				"init.lua"
+			],
+			[
+				"run",
+				"run.lua"
+			],
+			[
+				"sch",
+				"schemes.lua"
+			],
+			[
+				"scr",
+				"scss/screen.scss"
+			],
+			[
+				"sc",
+				"scss/screen.scss"
+			],
+			[
+				"in",
+				"init.lua"
+			],
+			[
+				"_ba",
+				"scss/_base.scss"
+			],
+			[
+				"_bas",
+				"scss/_base.scss"
+			],
+			[
+				"rock",
+				"madweb-scm-1.rockspec"
+			],
+			[
+				"con",
+				"config.rb"
+			],
+			[
+				"co",
+				"scss/codeLua.scss"
+			],
+			[
+				"code",
+				"scss/codeLua.scss"
+			],
+			[
+				"mad",
+				"css/highlight_styles/MAD.css"
+			],
+			[
+				"ind",
+				"index.jade"
+			],
+			[
+				"s",
+				"scss/screen.scss"
+			],
+			[
+				"col",
+				"commands.lua"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"ba",
+				"scss/_base.scss"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"app",
+				"js/app.js"
+			],
+			[
+				"ap",
+				"js/app.js"
+			],
+			[
+				"la",
+				"scss/lato.scss"
+			],
+			[
+				"mem",
+				"js/mem.js"
+			],
+			[
+				"int",
+				"init.lua"
+			],
+			[
+				"n",
+				"newpc.lua"
+			],
+			[
+				"pu",
+				"purgatory.lua"
+			],
+			[
+				"git",
+				"gitpush.lua"
+			],
+			[
+				"ne",
+				"newpc.lua"
+			],
+			[
+				"new",
+				"newpc.md"
+			],
+			[
+				"pa",
+				"gitpush.lua"
+			],
+			[
+				"dom",
+				"dom.lua"
+			],
+			[
+				"gi",
+				"gitpush.lua"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"scre",
+				"scss/screen.scss"
+			],
+			[
+				"sche",
+				"makeScheme.lua"
+			],
+			[
+				"fun",
+				"fun.lua"
+			],
+			[
+				"pre",
+				"sublimePreference.lua"
+			],
+			[
+				"colo",
+				"colorScheme.lua"
+			],
+			[
+				"colorsch",
+				"colorScheme.lua"
+			],
+			[
+				"mak",
+				"makeScheme.lua"
+			],
+			[
+				"p",
+				"palette.lua"
+			],
+			[
+				"bu",
+				"buffer.js"
+			],
+			[
+				"cko",
+				"ckoflow.jade"
+			],
+			[
+				"buf",
+				"buffer.js"
+			],
+			[
+				"pro",
+				"proto.jade"
+			],
+			[
+				"sr",
+				"madb2b/server.js"
+			],
+			[
+				"make",
+				"~/Library/Application Support/Sublime Text 3/Packages/MAD/flatDark.tmTheme"
+			],
+			[
+				"imgd",
+				"imgdir.lua"
+			],
+			[
+				"displ",
+				"display.lua"
+			],
+			[
+				"dis",
+				"display.lua"
+			],
+			[
+				"r",
+				"run.lua"
+			],
+			[
+				"c",
+				"color.lua"
+			],
+			[
+				"ov",
+				"js/overview.js"
+			],
+			[
+				"fl",
+				"~/Library/Application Support/Sublime Text 3/Packages/MAD/flatDark.tmTheme"
+			],
+			[
+				"omg",
+				"omg.lua"
+			],
+			[
+				"parse",
+				".sass-cache/0792476a5e0d14a39905ce7910a9671844ba62a2/_appearance.scssc"
+			],
+			[
+				"img",
+				"imgdir.lua"
+			],
+			[
+				"li",
+				"display-IN.html"
+			],
+			[
+				"di",
+				"display.lua"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"om",
+				"omg.lua"
+			],
+			[
+				"runm",
+				"runmadpixels.lua"
+			],
+			[
+				"pix",
+				"~/pixels/pixels.lua"
+			],
+			[
+				"pi",
+				"~/pixels/pixels.lua"
+			],
+			[
+				"pars",
+				"parse.lua"
+			],
+			[
+				"par",
+				"parse.lua"
+			],
+			[
+				"lis",
+				"list.lua"
+			],
+			[
+				"scs",
+				"scss/screen.scss"
+			],
+			[
+				"da",
+				"darkTheme.lua"
+			],
+			[
+				"sort",
+				"scss/sort.lua"
+			],
+			[
+				"d",
+				"dom.lua"
+			],
+			[
+				"mun",
+				"munsell.lua"
+			],
+			[
+				"dagr",
+				"scss/dagrad.lua"
+			],
+			[
+				"fla",
+				"~/Library/Application Support/Sublime Text 3/Packages/MAD/Flat_Dark.tmTheme"
+			],
+			[
+				"dark",
+				"darkTheme.lua"
+			],
+			[
+				"ten",
+				"tensor.lua"
+			],
+			[
+				"do",
+				"dom.lua"
+			],
+			[
+				"dar",
+				"darkTheme.lua"
+			],
+			[
+				"gra",
+				"scss/dagrad.lua"
+			],
+			[
+				"muns",
+				"munsell.lua"
+			],
+			[
+				"men",
+				"menu.lua"
+			],
+			[
+				"runma",
+				"runmadpixels.lua"
+			],
+			[
+				"list",
+				"list.lua"
+			],
+			[
+				"madpi",
+				"madpixels.lua"
+			],
+			[
+				"tor",
+				"tory.lua"
+			],
+			[
+				"html",
+				"html.lua"
+			],
+			[
+				"so",
+				"scss/sort.lua"
+			],
+			[
+				"to",
+				"tory.lua"
+			],
+			[
+				"m",
+				"main.lua"
+			],
+			[
+				"els",
+				"els.lua"
+			],
+			[
+				"ex",
+				"exec.lua"
+			],
+			[
+				"mas",
+				"madpixels.lua"
+			],
+			[
+				"ckoi",
+				"ckoia.lua"
+			],
+			[
+				"main",
+				"main.lua"
+			],
+			[
+				"lo",
+				"loading.lua"
+			],
+			[
+				"ru",
+				"run.lua"
+			],
+			[
+				"im",
+				"lua/img.lua"
+			],
+			[
+				"og",
+				"omg.lua"
+			],
+			[
+				"bin",
+				"bing.lua"
+			],
+			[
+				"get",
+				"get.lua"
+			],
+			[
+				"",
+				"sort.lua"
+			],
+			[
+				"upl",
+				"upload.lua"
+			],
+			[
+				"cro",
+				"crop.lua"
+			],
+			[
+				"bing",
+				"bing.lua"
+			],
+			[
+				"se",
+				"settings-bing.lua"
+			],
+			[
+				"set",
+				"~/ckoia/settings-bing.lua"
+			],
+			[
+				"ge",
+				"get-bing"
+			],
+			[
+				"dow",
+				"download-bing-images"
+			],
+			[
+				"b",
+				"~/get/1/bingo"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/git/laeh/MADcolors/MADcolors.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 117.0,
+		"selected_items":
+		[
+			[
+				"",
+				"MADcolors.rdm"
+			]
+		],
+		"width": 400.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

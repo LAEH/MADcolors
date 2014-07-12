@@ -1,14 +1,27 @@
 #!/usr/bin/env th
-local MADpalettes = {}
 
---●●●●●●●●●●●●●●●
---●             ●
---●             ●
---●             ●
---●             ●
---●             ●
---●             ●
---●●●●●●●●●●●●●●●
+
+--┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+--┃                                                                           ┃
+--┃                                                                      LIBS ┃
+--┃                                                                           ┃
+--┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+require 'trepl'
+require 'sys'
+require 'pl'
+require 'image'
+require 'nnx'
+require 'xlua'
+
+--┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+--┃                                                                           ┃
+--┃                                                                  PALETTES ┃
+--┃                                                                           ┃
+--┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+local col = require 'async.repl'.colorize
+local MADpalettes = {}
 
 MADpalettes.munsell = {
    codes = {
@@ -937,13 +950,40 @@ MADpalettes.ios7 = {
 }
 
 
---●●●●●●●●●●●●●●●
---●             ●
---●             ●
---●             ●
---●             ●
---●             ●
---●             ●
---●●●●●●●●●●●●●●●
+--┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+--┃                                                                           ┃
+--┃                                                                EXPERIMENT ┃
+--┃                                                                           ┃
+--┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+local munsellFlat = MADpalettes.munsell.flat
+
+MADpalettes.munsell.byChromaNo ={}
+local munsellChromaNumber
+local rowsLength = {}
+for i, matrix in ipairs(munsellFlat) do
+   rowsLength[i] = {}
+   for _, row in ipairs(matrix) do
+      local rowLength =#row
+      local stringRowLength = tostring(rowLength)
+      table.insert(rowsLength[i],rowLength)
+      print(rowsLength[i])
+      MADpalettes.munsell.byChromaNo[rowLength] = MADpalettes.munsell.byChromaNo[rowLength] or {}
+      table.insert(MADpalettes.munsell.byChromaNo[rowLength], row)
+      MADpalettes.munsell.byChromaNo[rowLength].hue = i
+   end
+   -- local toprint = [[
+   --    Hue No]]..i..[[/40]]
+   --       ..col._black(text)
+   --    ]]
+   -- ]]
+end
+print(MADpalettes.munsell.byChromaNo)
+-- print{rowsLength}
+
+--███████████████████████████████████████████████████████████████████████████
+--███████████████████████████████████████████████████████████████████████████
+--███████████████████████████████████████████████████████████████████████████
+
 -- print(#MADpalettes.munsell.flat)
 return MADpalettes
