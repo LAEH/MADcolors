@@ -958,7 +958,7 @@ MADpalettes.ios7 = {
 
 local munsellFlat = MADpalettes.munsell.flat
 
-MADpalettes.munsell.byChromaNo ={}
+MADpalettes.munsell.byChromaNo = {}
 local munsellChromaNumber
 local rowsLength = {}
 for i, matrix in ipairs(munsellFlat) do
@@ -968,6 +968,7 @@ for i, matrix in ipairs(munsellFlat) do
       local stringRowLength = tostring(rowLength)
       table.insert(rowsLength[i],rowLength)
       print(rowsLength[i])
+      row.hue = i
       MADpalettes.munsell.byChromaNo[rowLength] = MADpalettes.munsell.byChromaNo[rowLength] or {}
       table.insert(MADpalettes.munsell.byChromaNo[rowLength], row)
       MADpalettes.munsell.byChromaNo[rowLength].hue = i
