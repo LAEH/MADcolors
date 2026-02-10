@@ -1,17 +1,17 @@
-MADcolors
-=========
+# MADcolors
 
-Install
--------
+Munsell color system explorer and palette tool. Browse 40 hues, pick colors from the perceptually calibrated grid, and build harmonious palettes.
 
-```sh
-luarocks install https://raw.githubusercontent.com/LAEH/MADcolors/master/madcolors-scm-1.rockspec
-```
+## Run Locally
 
-Load and run
-------------
+**Prerequisites:** Node.js
 
-```lua
-th
-> mc = require 'madcolors'
+1. Install dependencies: `npm install`
+2. Set `GEMINI_API_KEY` in `.env.local`
+3. Run: `npm run dev`
+
+## Deploy
+
+```bash
+./deploy.sh
 ```

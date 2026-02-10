@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munsell - Documentation</title>
+    <style>
+        :root {
+            --bg-body: #f5f5f7;
+            --bg-card: #ffffff;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent: #0071e3;
+            --border: #d2d2d7;
+            --code-bg: #f5f5f7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            padding: 40px;
+        }
+        h1 { font-size: 34px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+        h2 { font-size: 24px; font-weight: 600; margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        /* UI File List - Fixed Overflow */
+        .ui-file-list { display: flex; flex-direction: column; gap: 0; }
+        .ui-file-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        @media (min-width: 600px) {
+            .ui-file-item {
+                grid-template-columns: 280px 1fr;
+                gap: 20px;
+                align-items: baseline;
+            }
+        }
+        .ui-filename {
+            font-family: "SF Mono", Menlo, monospace;
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 600;
+            word-break: break-all; /* Prevents overflow */
+        }
+        .ui-description { font-size: 14px; color: var(--text-secondary); }
+        
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .metadata-item {
+            background: #fbfbfd;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .metadata-label { font-size: 11px; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 4px; letter-spacing: 0.5px; }
+        .metadata-value { font-size: 15px; font-weight: 600; }
+        
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 500; }
+        .badge-success { background: rgba(52, 199, 89, 0.1); color: #34c759; }
+        
+        code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-family: "SF Mono", monospace; font-size: 13px; }
+        pre { background: #1e1e1e; color: #fff; padding: 20px; border-radius: 12px; overflow-x: auto; }
+        pre code { background: transparent; color: inherit; padding: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Munsell</h1>
+        <p style="color: var(--text-secondary);">Documentation & Inventory • Updated: 2025-12-04 22:19:26</p>
+        
+        <div class="metadata-grid">
+            <div class="metadata-item">
+                <div class="metadata-label">Firebase Project</div>
+                <div class="metadata-value">munsell-b24a1</div>
+            </div>
+            <div class="metadata-item">
+                <div class="metadata-label">Gen AI Core</div>
+                <div class="metadata-value"><span class='badge badge-success'>Gemini</span></div>
+            </div>
+        </div>
+
+        <h2>🎨 UI Modification Files</h2>
+        <div class="ui-file-list">
+            
+            <div class='ui-file-item'>
+                <div class='ui-filename'>vite.config.ts</div>
+                <div class='ui-description'>Core configuration or layout file.</div>
+            </div>
+        </div>
+
+        <h2>🚀 Deployment</h2>
+        <pre><code>./local.sh   # Run locally
+./deploy.sh  # Deploy to staging
+./prod.sh    # Deploy to production (if available)</code></pre>
+    </div>
+</body>
+</html>

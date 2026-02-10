@@ -1,0 +1,8 @@
+{
+  "name": "MADcolors",
+  "description": "Color palette creation tool and exploration based on the Munsell perceptually calibrated color space",
+  "category": "Work",
+  "status": "Live",
+  "url": "https://madcolors.laeh.ai",
+  "firebase_project": "laeh380to760"
+}
