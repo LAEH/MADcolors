@@ -1,37 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { MousePointer2, Move, Keyboard, Palette, X, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface OnboardingProps {
   onComplete: () => void;
 }
 
-const STORAGE_KEY = 'munsell-onboarding-complete';
+const STORAGE_KEY = 'madcolors-onboarding-complete';
 
-const steps = [
-  {
-    icon: Move,
-    title: 'Spin the Wheel',
-    description: 'Drag left or right on the bottom dial to browse through 40 Munsell hues. You can also scroll with your mouse wheel.',
-    accent: 'from-orange-400 to-red-500',
-  },
-  {
-    icon: Keyboard,
-    title: 'Keyboard Navigation',
-    description: 'Use arrow keys to step through hues one at a time. Press Home or End to jump to the first or last hue.',
-    accent: 'from-blue-400 to-indigo-500',
-  },
-  {
-    icon: MousePointer2,
-    title: 'Select Colors',
-    description: 'Click any color tile in the grid to explore it. You\'ll see its Munsell notation, hex code, and color harmonies.',
-    accent: 'from-green-400 to-emerald-500',
-  },
-  {
-    icon: Palette,
-    title: 'Explore Harmonies',
-    description: 'When you select a color, discover complementary, analogous, and triadic color schemes based on Munsell theory.',
-    accent: 'from-purple-400 to-pink-500',
-  },
+const TOUR_STEPS = [
+  { target: 'hue-dial', text: 'Drag or scroll to browse hues', position: 'above' as const },
+  { target: 'color-grid', text: 'Click any color tile to explore it', position: 'below' as const },
 ];
 
 export const useOnboarding = () => {
@@ -57,118 +34,112 @@ export const useOnboarding = () => {
   return { showOnboarding, completeOnboarding, resetOnboarding };
 };
 
-const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isExiting, setIsExiting] = useState(false);
+interface SpotlightRect {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+}
 
-  const handleNext = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
+const PADDING = 12;
+
+const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
+  const [step, setStep] = useState(0);
+  const [rect, setRect] = useState<SpotlightRect | null>(null);
+  const [exiting, setExiting] = useState(false);
+
+  const measure = useCallback(() => {
+    const sel = TOUR_STEPS[step]?.target;
+    if (!sel) return;
+    const el = document.querySelector(`[data-tour="${sel}"]`);
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    setRect({
+      top: r.top - PADDING,
+      left: r.left - PADDING,
+      width: r.width + PADDING * 2,
+      height: r.height + PADDING * 2,
+    });
+  }, [step]);
+
+  useEffect(() => {
+    // Small delay to let the UI settle on first render
+    const timer = setTimeout(measure, 100);
+    window.addEventListener('resize', measure);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', measure);
+    };
+  }, [measure]);
+
+  const advance = () => {
+    if (step < TOUR_STEPS.length - 1) {
+      setStep(step + 1);
     } else {
-      handleComplete();
+      setExiting(true);
+      setTimeout(onComplete, 250);
     }
   };
 
-  const handleComplete = () => {
-    setIsExiting(true);
-    setTimeout(() => {
-      onComplete();
-    }, 300);
-  };
+  if (!rect) return null;
 
-  const handleSkip = () => {
-    handleComplete();
-  };
-
-  const step = steps[currentStep];
-  const Icon = step.icon;
-  const isLastStep = currentStep === steps.length - 1;
+  const tourStep = TOUR_STEPS[step];
+  const tooltipAbove = tourStep.position === 'above';
 
   return (
     <div
-      className={`
-        fixed inset-0 z-[100] flex items-center justify-center p-6
-        transition-opacity duration-300
-        ${isExiting ? 'opacity-0' : 'opacity-100'}
-      `}
+      className={`fixed inset-0 z-[100] transition-opacity duration-250 ${exiting ? 'opacity-0' : 'opacity-100'}`}
+      onClick={advance}
+      style={{ cursor: 'pointer' }}
     >
-      {/* Backdrop */}
+      {/* Spotlight cutout via box-shadow */}
       <div
-        className="absolute inset-0 bg-slate-900/80 backdrop-blur-md"
-        onClick={handleSkip}
-      />
-
-      {/* Card */}
-      <div
-        className={`
-          relative max-w-md w-full
-          bg-white rounded-3xl shadow-2xl
-          overflow-hidden
-          transition-all duration-500
-          ${isExiting ? 'scale-95 opacity-0' : 'scale-100 opacity-100'}
-        `}
+        className="absolute transition-all duration-500 ease-out"
+        style={{
+          top: rect.top,
+          left: rect.left,
+          width: rect.width,
+          height: rect.height,
+          borderRadius: 16,
+          boxShadow: '0 0 0 9999px rgba(0,0,0,0.55)',
+        }}
       >
-        {/* Skip Button */}
-        <button
-          onClick={handleSkip}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
-          aria-label="Skip tutorial"
-        >
-          <X className="w-5 h-5" />
-        </button>
+        {/* Pulsing ring */}
+        <div
+          className="absolute inset-0 rounded-2xl animate-pulse"
+          style={{
+            border: '2px solid rgba(255,255,255,0.4)',
+          }}
+        />
+      </div>
 
-        {/* Icon Header */}
-        <div className={`bg-gradient-to-br ${step.accent} p-8 flex justify-center`}>
-          <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
-            <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
-          </div>
+      {/* Tooltip */}
+      <div
+        className="absolute transition-all duration-500 ease-out flex flex-col items-center pointer-events-none"
+        style={{
+          left: rect.left + rect.width / 2,
+          ...(tooltipAbove
+            ? { top: rect.top - 12, transform: 'translate(-50%, -100%)' }
+            : { top: rect.top + rect.height + 12, transform: 'translate(-50%, 0)' }
+          ),
+        }}
+      >
+        {/* Arrow pointing toward spotlight */}
+        {!tooltipAbove && (
+          <div
+            className="w-3 h-3 bg-white rotate-45 -mb-1.5"
+            style={{ boxShadow: '-1px -1px 2px rgba(0,0,0,0.06)' }}
+          />
+        )}
+        <div className="bg-white text-slate-800 text-sm font-medium px-5 py-2.5 rounded-full shadow-lg whitespace-nowrap">
+          {tourStep.text}
         </div>
-
-        {/* Content */}
-        <div className="p-8 pt-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">
-            {step.title}
-          </h2>
-          <p className="text-slate-600 text-base leading-relaxed mb-8">
-            {step.description}
-          </p>
-
-          {/* Progress Dots */}
-          <div className="flex items-center justify-center gap-2 mb-6">
-            {steps.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentStep(index)}
-                className={`
-                  w-2 h-2 rounded-full transition-all duration-300
-                  ${index === currentStep
-                    ? 'w-6 bg-slate-900'
-                    : index < currentStep
-                      ? 'bg-slate-400'
-                      : 'bg-slate-200'
-                  }
-                `}
-                aria-label={`Go to step ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Action Button */}
-          <button
-            onClick={handleNext}
-            className={`
-              w-full py-4 rounded-2xl font-semibold text-white
-              bg-gradient-to-r ${step.accent}
-              hover:shadow-lg hover:scale-[1.02]
-              active:scale-[0.98]
-              transition-all duration-200
-              flex items-center justify-center gap-2
-            `}
-          >
-            {isLastStep ? 'Start Exploring' : 'Next'}
-            {!isLastStep && <ChevronRight className="w-5 h-5" />}
-          </button>
-        </div>
+        {tooltipAbove && (
+          <div
+            className="w-3 h-3 bg-white rotate-45 -mt-1.5"
+            style={{ boxShadow: '1px 1px 2px rgba(0,0,0,0.06)' }}
+          />
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { Palette, Monitor } from 'lucide-react';
+import { Monitor } from 'lucide-react';
 import { MUNSELL_DATA } from './services/data';
 import HueSelector from './components/HueSelector';
 import MunsellGrid from './components/MunsellGrid';
@@ -214,8 +214,9 @@ const App: React.FC = () => {
 
       {/* Main Grid Area */}
       <main className="relative z-10 flex-grow flex flex-col items-center justify-center w-full h-full pb-32">
-        <div 
-          key={currentSelection.id} 
+        <div
+          key={currentSelection.id}
+          data-tour="color-grid"
           className="w-full h-full flex items-center justify-center animate-in fade-in zoom-in-95 duration-500"
         >
            <MunsellGrid 

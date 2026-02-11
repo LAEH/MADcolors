@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "madcolors",
+    "site": "laeh-madcolors",
     "public": "dist",
     "ignore": [
       "firebase.json",

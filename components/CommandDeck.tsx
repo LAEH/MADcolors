@@ -22,10 +22,12 @@ const CommandDeck: React.FC<CommandDeckProps> = ({
     <div className="fixed bottom-8 left-0 right-0 z-40 flex justify-center px-4 pointer-events-none">
       
       {/* Floating Pill Container */}
-      <div className="
+      <div
+        data-tour="hue-dial"
+        className="
         pointer-events-auto
         w-full max-w-4xl h-24
-        bg-white/80 backdrop-blur-2xl 
+        bg-white/80 backdrop-blur-2xl
         border border-white/40 shadow-2xl shadow-slate-200/50
         rounded-[2rem]
         relative
